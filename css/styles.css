@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: url('../assets/images/background.jpg');
+    background-size: cover;
+}
+
+header {
+    transition: 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.navbar {
+    padding: 1rem 0;
+    transition: 0.3s ease-in-out;
+}
+
+header.scrolled .navbar {
+    background: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-item {
+    letter-spacing: 1px;
+}
+
+/* ----------------- HERO SECTION ----------------- */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../assets/images/hero-1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center 80%;
+    transition: 0.3s ease-in-out;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 10;
+    background: linear-gradient(to top, #fff, transparent);
+}
+
+.hero .container {
+    position: relative;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+    font-weight: 600;
+}
+
+.hero h1,
+.hero p {
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero .btn.btn-dark {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* ----------------- ABOUT SECTION ----------------- */
+.about {
+    position: relative;
+}
+
+.about img {
+    border-radius: 0.5rem;
+}
